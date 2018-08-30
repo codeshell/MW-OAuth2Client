@@ -1,0 +1,61 @@
+{
+    "name": "mediawiki/oauth2-client",
+    "type": "mediawiki-extension",
+    "description": "The OAuth2 Client extension allows your users the ability to login to your wiki using any third-party site supporting OAuth2, like Google, Facebook, GitHub, SoundCloud.",
+    "keywords": [
+        "oauth2",
+        "client",
+        "login",
+        "authentication"
+    ],
+    "homepage": "https://www.mediawiki.org/wiki/Extension:OAuth2_Client",
+    "license": "LGPL-3.0-or-later",
+	"authors" : [
+        {
+            "name" : "Joost de Keijzer",
+            "homepage" : "http://dekeijzer.org",
+            "role" : "Author"
+        }, {
+            "name" : "Nischay Nahata",
+            "role" : "Developer",
+            "homepage" : "https://www.mediawiki.org/wiki/User:Nischayn22"
+        }, {
+            "name" : "Schine GmbH",
+            "role" : "Developer",
+            "homepage" : "https://star-made.org"
+        }, {
+            "name" : "codeshell",
+            "role" : "Developer",
+            "homepage" : "https://github.com/codeshell/MW-OAuth2Client"
+        }
+    ],
+    "require": {
+        "php": "^5.6|^7.0",
+        "composer/installers": "1.*,>=1.0.1",
+        "league/oauth2-client": "^2.3"
+    },
+	"autoload"   : {
+		"files": [
+			"OAuth2Client.php"
+		]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mediawiki\\Extensions\\OAuth2\\Client": "src"
+        }
+    },
+	"config": {
+		"optimize-autoloader": true,
+		"prepend-autoloader": false
+    },
+	"repositories" : [{
+        "type" : "git",
+        "url" : "https://github.com/codeshell/MW-OAuth2Client",
+        "name" : "GitHub"
+    }
+    ],
+	"support" : {
+		"issues" : "https://github.com/codeshell/MW-OAuth2Client/issues",
+		"source" : "https://github.com/codeshell/MW-OAuth2Client/tree/master"
+	}
+}
